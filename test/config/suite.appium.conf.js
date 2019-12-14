@@ -26,7 +26,7 @@ exports.config = {
     //
     maxInstances: 1,
 
-    capabilities: [{
+    /*capabilities: [{
         appiumVersion: '1.15.0',
         automationName: 'XCUITest',
         platformName: 'iOS',
@@ -40,16 +40,16 @@ exports.config = {
         clearSystemFiles: true,
         //commandTimeout: '7200',
         //app: APP_PATH
-    }],
+    }],*/
 
-    // capabilities: [{
-    //     appiumVersion: '1.15.0',
-    //     automationName: 'Appium',
-    //     platformName: 'Android',
-    //     //platformVersion: '9.0',
-    //     deviceName: 'Android Emulator',
+    capabilities: [{
+         appiumVersion: '1.15.0',
+         automationName: 'Appium',
+         platformName: 'Android',
+         platformVersion: '10.0',
+         deviceName: 'Pixel 2 Android 10',
     //     //deviceName: 'iPhone 6s',
-    //     browserName: 'chrome',
+         browserName: 'chrome',
     //     // chromeOptions: {
     //     //   androidPackage: 'com.android.chrome',
     //     // },
@@ -73,7 +73,7 @@ exports.config = {
     //     noSign: true,
     //     // intentCategory: 'android.intent.category.APP_CONTACTS',
     //     // intentAction: 'android.intent.action.MAIN',
-    // }],
+     }],
 
 
     host: '0.0.0.0',

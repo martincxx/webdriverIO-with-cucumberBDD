@@ -1,10 +1,8 @@
-//import { Given, When, Then } from 'cucumber';
+import { When } from 'cucumber';
 import loginPage from '../pageobjects/ta-login.page';
-import { defineSupportCode } from 'cucumber';
 import yahooPage from '../pageobjects/yahoo-search.page';
 
 
-defineSupportCode(function({ When }) {
   // *** belongs to Yahoo serch feature
   When(/^I enter "([^"]*)" into the search box$/, function(arg1) {
     yahooPage.enterText(arg1);
@@ -19,6 +17,3 @@ defineSupportCode(function({ When }) {
   When(/^I login with username and password "([^"]*)" "([^"]*)" into the text box$/, function(arg1, arg2) {
     loginPage.login(arg1, arg2);    // entering user name, password and and submiting the page
   });
-
-
-});
