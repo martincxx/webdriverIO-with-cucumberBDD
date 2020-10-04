@@ -1,40 +1,51 @@
-import Page from './page';
-import utl   from '../../utilities/common-utilities';
+import Page from "./page";
+import utl from "../../utilities/common-utilities";
 
 class LoginPage extends Page {
+  /**
+   * define elements
+   */
 
-    /**
-    * define elements
-    */
+  get usernameInput() {
+    return $(
+      "#loginfrm > div.wow.fadeIn > div:nth-child(1) > label > input[type=email]"
+    );
+  }
+  get passwordInput() {
+    return $(
+      "#loginfrm > div.wow.fadeIn > div:nth-child(2) > label > input[type=password]"
+    );
+  }
+  get loginButton() {
+    return $("#loginfrm > button");
+  }
+  get headerImage() {
+    return $('//img[@alt="Login"]');
+  }
 
-    get usernameInput()   { return $('div.form-group:nth-child(1) > input:nth-child(3)'); }
-    get passwordInput()   { return $('.panel-body > div:nth-child(2) > input:nth-child(3)'); }
-    get loginButton()     { return $('//button[contains(., "Login")]'); }
-    get headerImage()     { return $('//img[@alt=\"Login\"]'); }
+  /**
+   * define or overwrite page methods
+   */
+  open() {
+    super.open("login"); //this will append `login` to the baseUrl to form complete URL
+    //browser.pause(3000);
+  }
+  /**
+   * your page specific methods
+   */
 
-    /**
-     * define or overwrite page methods
-     */
-    open () {
-        super.open('login')       //this will append `login` to the baseUrl to form complete URL
-        //browser.pause(3000);
+  waitForloginPageToLoad() {
+    if (!this.headerImage.isDisplayed()) {
+      this.headerImage.waitForDisplayed(10000);
     }
-    /**
-     * your page specific methods
-     */
+  }
 
-    waitForloginPageToLoad () {
-      if(!this.headerImage.isDisplayed()){
-        this.headerImage.waitForDisplayed(10000);
-      }
-    }
-
-    login (username, password) {
-      //this.waitForloginPageToLoad();
-      this.usernameInput.setValue(username);
-      this.passwordInput.setValue(password);
-      this.loginButton.click();
-    }
+  login(username, password) {
+    //this.waitForloginPageToLoad();
+    this.usernameInput.setValue(username);
+    this.passwordInput.setValue(password);
+    this.loginButton.click();
+  }
 }
 
-export default new LoginPage()
+export default new LoginPage();

@@ -1,3 +1,4 @@
+
 Feature: Performing a Yahoo Search
 
     As a user on the Yahoo search page
@@ -19,5 +20,5 @@ Feature: Performing a Yahoo Search
         Then I should see a list of search results
 
         Examples:
-        |searchItem|
-        |"Selenium Webdriver"|
+            | searchItem           |
+            | "Selenium Webdriver" |
