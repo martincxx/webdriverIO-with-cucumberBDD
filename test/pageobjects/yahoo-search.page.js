@@ -11,7 +11,7 @@ class YahooPage extends Page {
     return $(".mag-glass");
   }
   get resultsList() {
-    return $("#results");
+    return $("#doc");
   }
 
   /**
