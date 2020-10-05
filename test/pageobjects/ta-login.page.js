@@ -23,12 +23,15 @@ class LoginPage extends Page {
     return $('//img[@alt="Login"]');
   }
 
+  get acceptCookies() {
+    return $("#cookyGotItBtnBox > div > button");
+  }
+
   /**
    * define or overwrite page methods
    */
   open() {
-    super.open("login"); //this will append `login` to the baseUrl to form complete URL
-    //browser.pause(3000);
+    super.open("login");
   }
   /**
    * your page specific methods
@@ -41,9 +44,9 @@ class LoginPage extends Page {
   }
 
   login(username, password) {
-    //this.waitForloginPageToLoad();
     this.usernameInput.setValue(username);
     this.passwordInput.setValue(password);
+    this.acceptCookies.click();
     this.loginButton.click();
   }
 }

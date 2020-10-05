@@ -23,7 +23,10 @@
     "automation"
   ],
   "author": "Martin Coronel <martincxx@gmail.com>",
-  "repository": {"type": "git", "url": "https://github.com/martincxx/webdriverIO-with-cucumberBDD.git"},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martincxx/webdriverIO-with-cucumberBDD.git"
+  },
   "license": "ISC",
   "dependencies": {
     "@babel/cli": "^7.5.0",
@@ -57,7 +60,6 @@
     "@wdio/browserstack-service": "^5.0.0",
     "@wdio/sauce-service": "^5.0.0",
     "@wdio/selenium-standalone-service": "^5.11.2",
-    "eslint": "^6.6.0",
     "eslint-config-standard": "^14.1.0",
     "eslint": "^6.6.0",
     "eslint-plugin-import": "^2.7.0",
