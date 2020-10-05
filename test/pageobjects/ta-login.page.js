@@ -1,5 +1,4 @@
 import Page from "./page";
-import utl from "../../utilities/common-utilities";
 
 class LoginPage extends Page {
   /**
